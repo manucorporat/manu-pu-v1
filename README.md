@@ -5,6 +5,12 @@ Designed for learning purposes.
 - Includes a simple complete implementation of the CPU in verilog.
 - A single pass assembler (it does not support forward declarations of flags).
 
+##Design
+
+![](https://raw.githubusercontent.com/manucorporat/manu-pu-v1/master/Screen%20Shot%202016-04-22%20at%2019.04.54.png)
+
+![](https://raw.githubusercontent.com/manucorporat/manu-pu-v1/master/Screen%20Shot%202016-04-22%20at%2019.05.14.png)
+
 
 ##Compile
 ```bash
