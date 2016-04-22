@@ -2,8 +2,8 @@
 
 Designed for learning purposes.
 
-- Includes a simple complete implementation of the CPU in verilog.
-- A single pass assembler (it does not support forward declarations of flags).
+- [Includes a simple complete implementation of the CPU in verilog.](https://github.com/manucorporat/manu-pu-v1/blob/master/unidad_funcional.v)
+- [A single pass assembler (it does not support forward declarations of flags)](https://github.com/manucorporat/manu-pu-v1/blob/master/Compiler/compiler.go)
 
 ##Design
 
