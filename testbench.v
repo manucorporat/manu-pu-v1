@@ -25,6 +25,7 @@ module testbench;
     initial begin
         $dumpfile("out.vcd");
         $dumpvars(0, CORE1, ciclo);
+        #10000 $finish;
     end
 
 endmodule

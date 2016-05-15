@@ -212,13 +212,12 @@ func NewAssembler() *Assembler {
 			{"LD  ", "001 0000", TypeRegistro2DA, "R[D] <- M[R[A]]"},
 			{"ST  ", "010 0000", TypeRegistro2AB, "M[R[A]] <- R[B]"},
 
-			{"BRZ ", "110 0000", TypeSalto, "if Z=1: PC <- PC + AD"},
+			{"BRZ ", "110 0011", TypeSalto, "if Z=1: PC <- PC + AD"},
 			{"BRN ", "110 0001", TypeSalto, "if N=1: PC <- PC + AD"},
-			{"BRZN", "110 0010", TypeSalto, "if Z=0: PC <- PC + AD"},
-			{"BRNN", "110 0011", TypeSalto, "if N=0: PC <- PC + AD"},
+			{"BRNZ", "110 0111", TypeSalto, "if Z=0: PC <- PC + AD"},
+			{"BRNN", "110 0101", TypeSalto, "if N=0: PC <- PC + AD"},
 
 			{"JMP ", "111 0001", TypeRegistro1A, "PC <- R[A]"},
-			{"HALT", "110 1111", TypeControl0, "PC <- PC (halt)"},
 		},
 
 		Registers: RegisterSet{

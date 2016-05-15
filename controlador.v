@@ -38,20 +38,15 @@ module controlPC(PC, busA, N, Z, PL, JB, BC, AD, clk);
         PC = 0;
     end
     always @ (posedge clk) begin
-        #10 casex ({PL,JB,BC,Zstored,Nstored})
-            9'b11xxxxx:
+        #10 casex ({PL,JB,BC,Nstored,Zstored})
+            7'b11zzzzz:
                 PC = busA;
 
-            10'b100001z,
-            10'b10001z1,
-            10'b100100z,
-            10'b10011z0:
+            7'b100011z, // si N
+    		7'b10011z1, // si Z
+    		7'b101010z, // si NOT N
+    		7'b10111z0: // si NOT Z
                 PC = PC + {{10{AD[5]}},AD};
-            10'b10111zz:
-            begin
-                // no op
-                #100 $finish;
-            end
             default:
                 PC = PC + 1;
         endcase

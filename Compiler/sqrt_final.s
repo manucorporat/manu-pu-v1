@@ -3,8 +3,6 @@
 ;%%%%%%%% Manuel Martinez-Almeida %%%%%%%%%
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-main:
-
 ; cargar RO <- M[0]
 LDI R0 0
 LD R0 R0
@@ -35,4 +33,6 @@ MOVA R5 R1
 MOVA R6 R1
 MOVA R7 R1
 
-HALT
+final:
+LDI R0 0
+BRZ final
