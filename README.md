@@ -1,18 +1,18 @@
-#Harvard Single Cycle CPU
+# Harvard Single Cycle CPU
 
 Designed for learning purposes.
 
 - Verilog: [Includes a simple complete implementation of the CPU in verilog.](https://github.com/manucorporat/manu-pu-v1/blob/master/unidad_funcional.v)
 - Golang: [A single pass assembler (it does not support forward declarations of flags)](https://github.com/manucorporat/manu-pu-v1/blob/master/Compiler/compiler.go)
 
-##Design
+## Design
 
 ![](https://raw.githubusercontent.com/manucorporat/manu-pu-v1/master/Screen%20Shot%202016-04-22%20at%2019.04.54.png)
 
 ![](https://raw.githubusercontent.com/manucorporat/manu-pu-v1/master/Screen%20Shot%202016-04-22%20at%2019.05.14.png)
 
 
-##Compile
+## Compiler
 ```bash
 cd Compiler/
 go run compiler.go <ASSEMBLY_FILE.S>
@@ -43,7 +43,7 @@ ROM[16] = 16'b1101111000000000;  // HALT                 (PC <- PC (halt))
 
 That must be manually copied to `memory.v` inside the ROM module.
 
-##Run
+## Run
 ```bash
 iverilog testbench.v
 vvp a.out
